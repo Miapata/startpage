@@ -2,7 +2,6 @@ function showTime() {
 	const date = new Date();
 
 	let today = date.toLocaleString("en", { weekday: "long" });
-	time.toLocaleString('en-US', { hour: 'numeric', hour12: true })
 	
 	let day = date.toLocaleString("en", { day: "2-digit" });
 	let month = date.toLocaleString("en", { month: "2-digit" });
