@@ -9,8 +9,8 @@ function showTime() {
 	let month = date.toLocaleString("en", { month: "2-digit" });
 	let year = date.toLocaleString("en", { year: "numeric" });
 
-	minute = addZero(minute);
-	second = addZero(second);
+	//minute = addZero(minute);
+	//second = addZero(second);
 
 	document.getElementById(
 		"date-display"
