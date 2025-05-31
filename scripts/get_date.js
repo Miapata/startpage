@@ -2,9 +2,9 @@ function showTime() {
 	const date = new Date();
 
 	let today = date.toLocaleString("en", { weekday: "long" });
-	let hour = date.toLocaleString("pl", { hour: "2-digit" });
-	let minute = date.toLocaleString("en", { minute: "2-digit" });
-	let second = date.toLocaleString("en", { second: "2-digit" });
+	var time = new Date();
+	time.toLocaleString('en-US', { hour: 'numeric', hour12: true })
+	
 	let day = date.toLocaleString("en", { day: "2-digit" });
 	let month = date.toLocaleString("en", { month: "2-digit" });
 	let year = date.toLocaleString("en", { year: "numeric" });
@@ -14,8 +14,12 @@ function showTime() {
 
 	document.getElementById(
 		"date-display"
-	).innerHTML = `${today}, ${hour}:${minute}:${second} | ${month}/${day}/${year}`;
+	).innerHTML = `${time} | ${month}/${day}/${year}`;
 	setTimeout(showTime, 0);
+}
+
+function get_hours(time_string) {
+    return new Date("2000-01-01 " + time_string).getHours() // 22
 }
 
 function addZero(i) {
